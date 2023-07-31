@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaScribe - Creative Idea Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+      <h1>IdeaScribe - Creative Idea Generator</h1>
+      <form action="{{ url_for('generated_ideas') }}" method="post">
+        <div class="form-group">
+          <label for="prompt">Unleash Your Imagination:</label>
+          <input type="text" id="prompt" name="prompt" placeholder="Let your creativity flow...">
+          <button type="submit">Inscribe Idea</button>
+        </div>
+      </form>
+      {% if idea_lines %}
+        <div id="prompt_output">
+          <h2>Your Input Prompt:</h2>
+          <p>{{ idea_prompt }}</p>
+        </div>
+          <div id="generated_ideas">
+            <h2>Generated Ideas:</h2>
+            {% for line in idea_lines %}
+              <p>{{ line }}</p>
+            {% endfor %}
+          </div>
+      {% endif %}
+    </div>
+</body>
+</html>

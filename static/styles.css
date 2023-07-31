@@ -1,0 +1,114 @@
+/* Add Google Fonts link to include Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #181c2d; /* Dark blue background color */
+    color: #f5f5f5; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1a2035; /* Darker blue container background color */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00a8e8; /* Blue accent color */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #f5f5f5; /* Light text color for labels */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #444; /* Darker border color */
+    border-radius: 4px;
+    background-color: #1a2035; /* Darker input background color */
+    color: #f5f5f5; /* Light text color for input */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00a8e8; /* Blue accent color */
+    color: #f5f5f5; /* Light text color for button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0091cc; /* Darker blue on hover */
+}
+
+#prompt_output {
+    margin-top: 20px;
+}
+
+#prompt_output h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #00a8e8; /* Blue accent color */
+}
+
+#prompt_output p {
+    margin: 5px 0;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #192040; /* Darker prompt background color */
+}
+
+#generated_ideas {
+    margin-top: 20px;
+}
+
+#generated_ideas h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #00a8e8; /* Blue accent color */
+}
+
+#generated_ideas p {
+    margin: 8px 0;
+    font-size: 16px;
+    border: 1px solid #444; /* Darker border color */
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #1a2035; /* Darker idea background color */
+}
+
+/* Remove default outline on input focus */
+input:focus {
+    outline: none;
+}
+
+/* Add subtle box-shadow on input focus */
+input:focus {
+    box-shadow: 0 0 4px #00a8e8; /* Blue accent color on focus */
+}
+
+/* Add a soft box-shadow on button hover */
+button:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
