@@ -1,11 +1,6 @@
-from flask import Flask, render_template, request
+from flask import render_template, request
 import openai
-
-app = Flask(__name__)
-
-# Replace 'YOUR_OPENAI_API_KEY' with your actual OpenAI API key
-openai.api_key = 'YOUR_OPENAI_API_KEY'
-
+from app import app
 
 @app.route("/", methods=["GET", "POST"], endpoint="generated_ideas")
 def index():
@@ -28,6 +23,3 @@ def index():
         idea_lines = [choice['text'].strip() for choice in choices if choice['text'].strip()]
 
     return render_template("index.html", idea_lines=idea_lines, idea_prompt=idea_prompt)
-
-if __name__ == "__main__":
-    app.run(debug=True)
